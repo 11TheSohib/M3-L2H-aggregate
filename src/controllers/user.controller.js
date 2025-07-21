@@ -5,12 +5,6 @@ import User from "../models/user.model.js";
 class UserController extends PUDcontroller {
   constructor() {
     super(User, `User`);
-    this.create = this.create.bind(this);
-    this.getAll = this.getAll.bind(this);
-    this.getById = this.getById.bind(this);
-    this.update = this.update.bind(this);
-    this.delete = this.delete.bind(this);
-    this.getTopBloggers = this.getTopBloggers.bind(this);
   }
 
   async getTopBloggers(req, res) {

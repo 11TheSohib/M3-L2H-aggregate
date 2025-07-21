@@ -5,13 +5,6 @@ import Video from "../models/video.model.js";
 class VideoController extends PUDcontroller {
   constructor() {
     super(Video, `Video`);
-    this.create = this.create.bind(this);
-    this.getAll = this.getAll.bind(this);
-    this.getById = this.getById.bind(this);
-    this.update = this.update.bind(this);
-    this.delete = this.delete.bind(this);
-    this.getPopularCategories = this.getPopularCategories.bind(this);
-    this.getUserVideoStats = this.getUserVideoStats.bind(this);
   }
 
   async getUserVideoStats(req, res) {

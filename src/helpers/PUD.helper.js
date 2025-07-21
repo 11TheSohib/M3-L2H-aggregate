@@ -6,7 +6,7 @@ export class PUDcontroller {
     this.keyWord = keyWord;
   }
 
-  async create(req, res) {
+  create = async (req, res) => {
     try {
       const newItem = await this.model.create(req.body);
 
@@ -20,7 +20,7 @@ export class PUDcontroller {
     }
   }
 
-  async getAll(_, res) {
+  getAll = async (_, res) => {
     try {
       const data = await this.model.find();
       return res.status(200).json({
@@ -33,7 +33,7 @@ export class PUDcontroller {
     }
   }
 
-  async getById(req, res) {
+  getById = async (req, res) => {
     try {
       const id = req.params.id;
       const data = await this.model.findById(id);
@@ -54,7 +54,7 @@ export class PUDcontroller {
     }
   }
 
-  async update(req, res) {
+  update = async (req, res) => {
     try {
       const id = req.params?.id;
       const updateData = req.body;
@@ -81,7 +81,7 @@ export class PUDcontroller {
     }
   }
 
-  async delete(req, res) {
+  delete = async (req, res) => {
     try {
       const { id } = req.params;
       const deletedItem = await this.model.findByIdAndDelete(id);
