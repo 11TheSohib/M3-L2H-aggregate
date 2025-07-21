@@ -3,8 +3,8 @@ import { errorHelper } from "../helpers/send_error.helper.js";
 import Comment from "../models/commet.model.js";
 
 class CommentController extends PUDcontroller {
-  constructor(model, keyWord) {
-    super(model, keyWord);
+  constructor() {
+    super(Comment, `Comment`);
     this.create = this.create.bind(this);
     this.getAll = this.getAll.bind(this);
     this.getById = this.getById.bind(this);
@@ -13,5 +13,5 @@ class CommentController extends PUDcontroller {
   }
 }
 
-const commet = new CommentController(Comment, `Comment`);
+const commet = new CommentController();
 export default commet;

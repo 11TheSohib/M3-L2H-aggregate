@@ -3,8 +3,8 @@ import { errorHelper } from "../helpers/send_error.helper.js";
 import User from "../models/user.model.js";
 
 class UserController extends PUDcontroller {
-  constructor(model, keyWord) {
-    super(model, keyWord);
+  constructor() {
+    super(User, `User`);
     this.create = this.create.bind(this);
     this.getAll = this.getAll.bind(this);
     this.getById = this.getById.bind(this);
@@ -52,5 +52,5 @@ class UserController extends PUDcontroller {
   }
 }
 
-const user = new UserController(User, `User`);
+const user = new UserController();
 export default user;

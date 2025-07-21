@@ -3,8 +3,8 @@ import { errorHelper } from "../helpers/send_error.helper.js";
 import Sbc from "../models/subscriptions.model.js";
 
 class SbcController extends PUDcontroller {
-  constructor(model, keyWord) {
-    super(model, keyWord);
+  constructor() {
+    super(Sbc, `Subscription`);
     this.create = this.create.bind(this);
     this.getAll = this.getAll.bind(this);
     this.getById = this.getById.bind(this);

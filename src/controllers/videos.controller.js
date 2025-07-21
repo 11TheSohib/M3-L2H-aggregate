@@ -3,8 +3,8 @@ import { errorHelper } from "../helpers/send_error.helper.js";
 import Video from "../models/video.model.js";
 
 class VideoController extends PUDcontroller {
-  constructor(model, keyWord) {
-    super(model, keyWord);
+  constructor() {
+    super(Video, `Video`);
     this.create = this.create.bind(this);
     this.getAll = this.getAll.bind(this);
     this.getById = this.getById.bind(this);
